@@ -1,0 +1,154 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+}
+
+:root {
+  /* Primary */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral */
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  padding: 10rem 2.5rem;
+}
+
+.parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  padding: 3.8rem;
+}
+
+.box h1,
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  color: var(--Very-light-gray);
+}
+
+.sedans-parent {
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  min-height: auto;
+}
+
+.sedans-parent .box__link a {
+  color: var(--Bright-orange);
+}
+
+.suvs-parent {
+  background-color: var(--Dark-cyan);
+}
+
+.suvs-parent .box__link a {
+  color: var(--Dark-cyan);
+}
+
+.luxury-parent {
+  background-color: var(--Very-dark-cyan);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.luxury-parent .box__link a {
+  color: var(--Very-dark-cyan);
+}
+
+.box img {
+  padding-bottom: 2rem;
+}
+
+.box p {
+  width: 90%;
+  color: var(--paragraphs);
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.box .box__link {
+  display: block;
+  margin: 2.5rem 0 1rem 0;
+}
+
+.box .box__link a {
+  padding: 1rem 2rem;
+  background-color: var(--Very-light-gray);
+  border-radius: 3rem;
+}
+
+/* Responsive */
+@media all and (min-width: 1024px) {
+  main {
+    justify-content: center;
+  }
+
+  .container {
+    padding: 0;
+    width: 900px;
+  }
+
+  .parent {
+    flex-direction: row;
+  }
+
+  .sedans-parent,
+  .luxury-parent {
+    border-radius: 0;
+  }
+
+  .sedans-parent {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .luxury-parent {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .box p {
+    width: 100%;
+    padding-bottom: 10rem;
+  }
+
+  /* Active */
+  .box .box__link a:hover {
+    color: var(--Very-light-gray);
+    background-color: transparent;
+    border: 2px solid var(--Very-light-gray);
+  }
+}
