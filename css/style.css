@@ -12,6 +12,7 @@ body {
   font-family: "Big Shoulders Display", cursive;
   font-family: "Lexend Deca", sans-serif;
   font-size: 1.5rem;
+  background-color: var(--Very-light-gray);
 }
 
 :root {
